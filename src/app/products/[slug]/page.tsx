@@ -27,14 +27,14 @@ export default async function CategoriaPage(props: any) {
 
 
   return (
-    <div className="p-10 mb-40">
+    <div className="p-10 mb-64">
       <h1 className="text-3xl font-bold mb-6 flex justify-center">
         {params.slug}
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-32">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-64">
         {prodotti.map((p: any) => (
-          <div key={p._id} className="border p-4 rounded-3xl shadow-md bg bg-[#00FF9C] relative text-black flex flex-col ">
+          <div key={p._id} className="border p-4 rounded-xl shadow-md bg bg-[#00FF9C] relative text-black flex flex-col ">
             <div className="flex justify-baseline">
               <p className="">{p.prezzo}</p>
             </div>
@@ -48,6 +48,12 @@ export default async function CategoriaPage(props: any) {
             <div className="flex justify-center mt-3">
               <h2 className="">{p.nome}</h2>
             </div>
+            <div className="flex justify-baseline mt-80 absolute font-bold text-white">
+              <p className="">Ingredienti:</p>
+            </div>
+            <div className="flex justify-baseline mt-[21.5rem] font-medium absolute text-white">
+              <p>{p.descrizione}</p>
+            </div>
             <div>
               {ectoplasma.map((ecto) =>(
                 <div 
@@ -57,6 +63,7 @@ export default async function CategoriaPage(props: any) {
               ))}
             </div>
           </div>
+          
         ))}
       </div>
     </div>
