@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 const ProdottiSchema = new mongoose.Schema({
   nome: String,
   prezzo: String,
-  categoria: String
+  categoria: String,
+  immagine: String
 });
 
 

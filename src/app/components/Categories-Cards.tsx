@@ -19,7 +19,7 @@ export default async function CategoriesCards(){
             <div className="w-full max-w-[20rem] grid p-6 mt-8 grid-cols-1 gap-32 md:grid-cols-3 md:max-w-[80rem]">
                 {categoria.map((cat)=>(
                     <Link key={cat.slug} href={`/products/${cat.slug}`}>
-                        <div className="bg-[#00FF9C] relative rounded-3xl p-5 flex flex-col justify-between">
+                        <div className="bg-[#00FF9C] relative rounded-3xl p-5 flex flex-col">
                             <div className="h-32 w-full overflow-hidden">
                                 <img 
                                     className="object-contain w-full h-full"
