@@ -6,8 +6,10 @@ const CategorieSchema = new mongoose.Schema({
     gb: String
   },
   prezzo: String,
-  immagine: String
+  immagine: String,
+  slug: String
 });
+
 
 export default mongoose.models.Categorie_Prodotti ||
   mongoose.model("Categorie_Prodotti", CategorieSchema, "Categorie_Prodotti");
