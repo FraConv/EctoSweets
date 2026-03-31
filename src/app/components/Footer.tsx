@@ -2,7 +2,6 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#242D38] text-white px-6 py-6 md:px-16">
       <div className="flex flex-col md:flex-row md:justify-between gap-6">
-
         <div className="flex flex-col gap-2 text-center md:text-left">
           <p className="text-sm md:text-base">
             Copyright © 2026 EctoSweets
@@ -22,7 +21,6 @@ export default function Footer() {
             <p className="cursor-pointer hover:underline">TikTok</p>
           </div>
         </div>
-
       </div>
     </footer>
   );

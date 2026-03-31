@@ -5,9 +5,11 @@ const ProdottiSchema = new mongoose.Schema({
   prezzo: String,
   categoria: String,
   immagine: String,
-  descrizione: String
+  descrizione: {
+    it: String,
+    en: String
+  },
 });
-
 
 export default mongoose.models.Prodotti ||
   mongoose.model("Prodotti", ProdottiSchema, "Prodotti");

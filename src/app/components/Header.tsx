@@ -1,22 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
-type Lang = "it" | "gb";
+import { useLanguage } from "@/context/LanguageContext";
+import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [lang, setLang] = useState<Lang>("it");
+  const { lang, setLang } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const switchLang = (): void => {
-    setLang((prev) => (prev === "it" ? "gb" : "it"));
-  };
+  if (!mounted) return null; 
 
-  if (!mounted) return null;
+  const switchLang = () => {
+    setLang(lang === "it" ? "en" : "it");
+  };
 
   return (
     <div className="w-full h-14 rounded-bl-[3.3rem] bg-[#242D38] flex items-center justify-between p-8">

@@ -3,17 +3,20 @@ import Header from "./components/Header";
 import CategoriesCards from "./components/Categories-Cards";
 import Social from "./components/Social";
 import Footer from "./components/Footer";
+import LoaderWrapper from "./components/Loader";
 
 export default async function Home() {
 
   return (
-    <div className="flex items-center flex-col ">
-      <Header />
-      <Social></Social>
-      <CoverCharge></CoverCharge>
-      <CategoriesCards></CategoriesCards>
-      <div className="flex-grow mb-48"></div>
-      <Footer />
-    </div>
+    <LoaderWrapper>
+      <div className="flex items-center flex-col ">
+        <Header/>
+        <Social/>
+        <CoverCharge/>
+        <CategoriesCards/>
+        <div className="flex-grow mb-48"/>
+          <Footer />
+      </div>
+    </LoaderWrapper>
   );
 }
