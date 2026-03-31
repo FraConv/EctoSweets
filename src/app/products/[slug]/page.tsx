@@ -18,10 +18,12 @@ export default async function CategoriaPage(props: any) {
   }
 
   const ectoplasma = [
-    {id: "1", position: "left-20", height: "h-10", width: "w-8"},
-    {id: "2", position: "left-28", height: "h-20", width: "w-8"},
-    {id: "3", position: "left-36", height: "h-28", width: "w-8"},
-    {id: "4", position: "left-44", height: "h-15", width: "w-8"},
+    {id: "1", position: "left-8", height: "h-10", width: "w-8"},
+    {id: "2", position: "left-16", height: "h-25", width: "w-8"},
+    {id: "3", position: "left-24", height: "h-20", width: "w-8"},
+    {id: "4", position: "left-50", height: "h-15", width: "w-8"},
+    {id: "5", position: "left-42", height: "h-20", width: "w-8"},
+    {id: "6", position: "left-58", height: "h-29", width: "w-8"},
   ]
 
 
