@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Baloo_Tamma_2 } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +13,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const baloo = Baloo_Tamma_2({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // scegli quelli che ti servono
+  variable: "--font-baloo",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+<html
+  lang="en"
+  className={`${geistSans.variable} ${geistMono.variable} ${baloo.variable} h-full antialiased`}
+>
+      <body className={`${baloo.className} min-h-full flex flex-col`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>

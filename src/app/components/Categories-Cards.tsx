@@ -22,10 +22,10 @@ export default function CategoriesCards() {
   ];
 
   return (
-    <div className="w-full max-w-[20rem] grid p-6 mt-8 grid-cols-1 gap-32 md:grid-cols-3 md:max-w-[80rem]">
+    <div className="w-full max-w-[20rem] grid p-6 mt-3 grid-cols-1 gap-40 md:grid-cols-3 md:max-w-[80rem]">
       {categoria.map((cat) => (
         <Link key={cat.slug} href={`/products/${cat.slug}`}>
-          <div className="bg-[#00FF9C] relative rounded-3xl p-5 flex flex-col">
+          <div className="bg-[#00FF9C] relative rounded-4xl p-5 flex flex-col">
 
             <div className="h-32 w-full overflow-hidden">
               <img 
@@ -35,11 +35,11 @@ export default function CategoriesCards() {
               />
             </div>
 
-            <div className="flex mt-3 justify-center text-black text-[1.2rem] font-bold">
+            <div className="flex mt-3 justify-center text-black text-[1.3rem] font-bold">
               <p>{cat.nome?.[lang]}</p>
             </div>
 
-            <div className="flex justify-center text-black text-[1rem] font-medium">
+            <div className="flex justify-center text-black text-[1.1rem] font-semibold">
               <p>{cat.prezzo}</p>
             </div>
 
