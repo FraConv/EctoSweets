@@ -9,12 +9,12 @@ export default async function Home() {
 
   return (
     <LoaderWrapper>
-      <div className="flex items-center flex-col ">
+      <div className="flex items-center flex-col">
         <Header/>
         <Social/>
         <CoverCharge/>
         <CategoriesCards/>
-        <div className="flex-grow mb-48"/>
+        <div className="flex-grow mb-[27rem]"/>
           <Footer />
       </div>
     </LoaderWrapper>
